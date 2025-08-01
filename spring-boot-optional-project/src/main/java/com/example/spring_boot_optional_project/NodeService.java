@@ -1,6 +1,6 @@
 package com.example.spring_boot_optional_project;
 
-import com.example.networkmanager.model.NetworkNode;
+import com.example.spring_boot_optional_project.NetworkNode;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -32,5 +32,10 @@ public class NodeService {
 
     public boolean deleteNode(Long id) {
         return nodeStore.remove(id) != null;
+    }
+
+
+    public List<NetworkNode> getAllNodes() {
+        return new ArrayList<>(nodeStore.values());
     }
 }

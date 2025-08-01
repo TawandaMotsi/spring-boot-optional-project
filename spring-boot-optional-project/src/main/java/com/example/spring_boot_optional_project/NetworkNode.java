@@ -1,13 +1,9 @@
 package com.example.spring_boot_optional_project;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class NetworkNode {
+public class NetworkNode{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +14,11 @@ public class NetworkNode {
     private int latitude;
     private int longitude;
 
-    public NetworkNode(Long id, String name, String location, int latitude, int longitude) {
-        this.id = id;
+    public NetworkNode() {
+    }
+
+    public NetworkNode(String name, String location, int latitude, int longitude) {
+
         this.name = name;
         this.location = location;
         this.latitude = latitude;
@@ -63,7 +62,10 @@ public class NetworkNode {
     }
 
     public void setLongitude(int longitude) {
-        this.longitude = longitude;
+
+    }
+
+    public void addNode(String name, String athlone, int i, int i1) {
     }
 }
 
