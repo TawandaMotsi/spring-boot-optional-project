@@ -30,6 +30,7 @@ public class NodeService {
         return Optional.empty();
     }
 
+
     public boolean deleteNode(Long id) {
         return nodeStore.remove(id) != null;
     }
